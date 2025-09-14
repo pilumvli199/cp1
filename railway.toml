@@ -1,0 +1,6 @@
+# A minimal railway config — Railway can use Dockerfile or Procfile. Keep this file as optional.
+[project]
+name = "crypto-phase1-bot"
+
+[services.web]
+run = "docker build -t app . && docker run -e REDIS_URL -e TELEGRAM_BOT_TOKEN -e TELEGRAM_CHAT_ID -e OPENAI_API_KEY app"
